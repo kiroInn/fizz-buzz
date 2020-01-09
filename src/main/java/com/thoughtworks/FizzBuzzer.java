@@ -4,19 +4,24 @@ public class FizzBuzzer {
     public static String FIZZ = "Fizz";
     public static String BUZZ = "Buzz";
     public static String WHIZZ = "Whizz";
+    public static String FIZZ_BUZZ = "FizzBuzz";
 
     public static String fizzBuzz(final int index)
     {   
+        StringBuffer result = new StringBuffer();
         if(index % 3 == 0) {
-            return FizzBuzzer.FIZZ;
+            result.append(FizzBuzzer.FIZZ);
         }
         if(index % 5 == 0) {
-            return FizzBuzzer.BUZZ;
+            result.append(FizzBuzzer.BUZZ);
         }
         if(index % 7 == 0) {
-            return FizzBuzzer.WHIZZ;
+            result.append(FizzBuzzer.WHIZZ);
         }
-        return "1";
+        if(result.length() > 0){
+            return result.toString();
+        }
+        return  String.valueOf(index);
     }
 }
 

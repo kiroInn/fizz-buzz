@@ -35,4 +35,13 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(14), FizzBuzzer.WHIZZ);
         assertEquals(FizzBuzzer.fizzBuzz(28), FizzBuzzer.WHIZZ);
     }
+
+    @Test
+    public void should_return_FizzBuzz_when_multiple_of_three_and_five()
+    {
+        assertEquals(FizzBuzzer.fizzBuzz(15), FizzBuzzer.FIZZ_BUZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(30), FizzBuzzer.FIZZ_BUZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(60), FizzBuzzer.FIZZ_BUZZ);
+    }
+    
 }
