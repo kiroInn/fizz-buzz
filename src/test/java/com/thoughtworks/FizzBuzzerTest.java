@@ -13,10 +13,18 @@ public class FizzBuzzerTest {
     }
 
     @Test
-    public void should_return_fizz_when_multiple_of_three()
+    public void should_return_Fizz_when_multiple_of_three()
     {
-        assertEquals(FizzBuzzer.fizzBuzz(3), "fizz");
-        assertEquals(FizzBuzzer.fizzBuzz(6), "fizz");
-        assertEquals(FizzBuzzer.fizzBuzz(9), "fizz");
+        assertEquals(FizzBuzzer.fizzBuzz(3), FizzBuzzer.FIZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(6), FizzBuzzer.FIZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(9), FizzBuzzer.FIZZ);
+    }
+
+    @Test
+    public void should_return_Buzz_when_multiple_of_five()
+    {
+        assertEquals(FizzBuzzer.fizzBuzz(5), FizzBuzzer.BUZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(10), FizzBuzzer.BUZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(20), FizzBuzzer.BUZZ);
     }
 }
