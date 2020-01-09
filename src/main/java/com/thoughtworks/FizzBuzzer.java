@@ -8,7 +8,7 @@ public class FizzBuzzer {
     public static String fizzBuzz(final int index)
     {   
         StringBuffer result = new StringBuffer();
-        if(index % 3 == 0) {
+        if(index % 3 == 0 || isIncludeThree(index)) {
             result.append(FizzBuzzer.FIZZ);
         }
         if(index % 5 == 0) {
@@ -21,6 +21,10 @@ public class FizzBuzzer {
             return result.toString();
         }
         return  String.valueOf(index);
+    }
+
+    private static boolean isIncludeThree(final int index) {
+        return String.valueOf(index).indexOf("3") > 0;
     }
 }
 

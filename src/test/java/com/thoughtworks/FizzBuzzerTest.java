@@ -71,5 +71,12 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(70), result);
         assertEquals(FizzBuzzer.fizzBuzz(140), result);
     }
+
+    @Test
+    public void should_return_Fizz_when_include_number_therr()
+    {
+        String result = "Fizz";
+        assertEquals(FizzBuzzer.fizzBuzz(13), result);
+    }
     
 }
