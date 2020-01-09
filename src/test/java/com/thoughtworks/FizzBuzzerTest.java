@@ -53,5 +53,14 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(210), result);
         assertEquals(FizzBuzzer.fizzBuzz(315), result);
     }
+
+    @Test
+    public void should_return_FizzWhizz_when_multiple_of_three_and_seven()
+    {
+        String result = "FizzWhizz";
+        assertEquals(FizzBuzzer.fizzBuzz(21), result);
+        assertEquals(FizzBuzzer.fizzBuzz(42), result);
+        assertEquals(FizzBuzzer.fizzBuzz(126), result);
+    }
     
 }
