@@ -39,9 +39,19 @@ public class FizzBuzzerTest {
     @Test
     public void should_return_FizzBuzz_when_multiple_of_three_and_five()
     {
-        assertEquals(FizzBuzzer.fizzBuzz(15), FizzBuzzer.FIZZ_BUZZ);
-        assertEquals(FizzBuzzer.fizzBuzz(30), FizzBuzzer.FIZZ_BUZZ);
-        assertEquals(FizzBuzzer.fizzBuzz(60), FizzBuzzer.FIZZ_BUZZ);
+        String excepted = "FizzBuzz";
+        assertEquals(FizzBuzzer.fizzBuzz(15), excepted);
+        assertEquals(FizzBuzzer.fizzBuzz(30), excepted);
+        assertEquals(FizzBuzzer.fizzBuzz(60), excepted);
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_when_multiple_of_three_and_five_and_seven()
+    {
+        String result = "FizzBuzzWhizz";
+        assertEquals(FizzBuzzer.fizzBuzz(105), result);
+        assertEquals(FizzBuzzer.fizzBuzz(210), result);
+        assertEquals(FizzBuzzer.fizzBuzz(315), result);
     }
     
 }

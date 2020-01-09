@@ -4,7 +4,6 @@ public class FizzBuzzer {
     public static String FIZZ = "Fizz";
     public static String BUZZ = "Buzz";
     public static String WHIZZ = "Whizz";
-    public static String FIZZ_BUZZ = "FizzBuzz";
 
     public static String fizzBuzz(final int index)
     {   
