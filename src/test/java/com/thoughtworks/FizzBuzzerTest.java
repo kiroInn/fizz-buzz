@@ -27,4 +27,12 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(10), FizzBuzzer.BUZZ);
         assertEquals(FizzBuzzer.fizzBuzz(20), FizzBuzzer.BUZZ);
     }
+
+    @Test
+    public void should_return_Whizz_when_multiple_of_seven()
+    {
+        assertEquals(FizzBuzzer.fizzBuzz(7), FizzBuzzer.WHIZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(14), FizzBuzzer.WHIZZ);
+        assertEquals(FizzBuzzer.fizzBuzz(28), FizzBuzzer.WHIZZ);
+    }
 }
