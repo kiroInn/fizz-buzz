@@ -8,13 +8,26 @@ public class FizzBuzzer {
     public static String fizzBuzz(final int index)
     {   
         StringBuffer result = new StringBuffer();
-        if(index % 3 == 0 || isIncludeThree(index)) {
+        Boolean isEnableRule = true;
+        if(isEnableRule && isContains(index, "3")){
+            result.append(FizzBuzzer.FIZZ);
+            isEnableRule = false;
+        }
+        if(isEnableRule && isContains(index, "5")){
+            result.append(FizzBuzzer.BUZZ);
+            isEnableRule = false;
+        }
+        if(isEnableRule && isContains(index, "7")){
+            result.append(FizzBuzzer.WHIZZ);
+            isEnableRule = false;
+        }
+        if(isEnableRule && index % 3 == 0) {
             result.append(FizzBuzzer.FIZZ);
         }
-        if(index % 5 == 0) {
+        if(isEnableRule && index % 5 == 0) {
             result.append(FizzBuzzer.BUZZ);
         }
-        if(index % 7 == 0) {
+        if(isEnableRule && index % 7 == 0) {
             result.append(FizzBuzzer.WHIZZ);
         }
         if(result.length() > 0){
@@ -23,8 +36,8 @@ public class FizzBuzzer {
         return  String.valueOf(index);
     }
 
-    private static boolean isIncludeThree(final int index) {
-        return String.valueOf(index).indexOf("3") > 0;
+    private static boolean isContains(final int index, String character) {
+        return String.valueOf(index).indexOf(character) > 0;
     }
 }
 
