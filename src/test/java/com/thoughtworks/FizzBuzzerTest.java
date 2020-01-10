@@ -101,5 +101,14 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(17), result);
         assertEquals(FizzBuzzer.fizzBuzz(37), result);
     }
+
+    @Test
+    public void should_return_empty_when_pass_error_index()
+    {
+        String result = "";
+        assertEquals(FizzBuzzer.fizzBuzz(0), result);
+        assertEquals(FizzBuzzer.fizzBuzz(-1), result);
+        assertEquals(FizzBuzzer.fizzBuzz(-99), result);
+    }
     
 }
