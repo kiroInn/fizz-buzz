@@ -10,35 +10,25 @@ public class FizzBuzzer {
             return "";
         }
         StringBuffer result = new StringBuffer();
-        Boolean isEnableRule = true;
-        if (isEnableRule && isContains(index, "3")) {
-            result.append(FizzBuzzer.FIZZ);
-            isEnableRule = false;
+        Boolean isContains7 = isContains(index, "7");
+        Boolean isContains5 = isContains(index, "5");
+        Boolean isContains3 = isContains(index, "3");
+        if (isContains3 && !isContains5) {
+            return FizzBuzzer.FIZZ;
         }
-        if (isEnableRule && isContains(index, "5")) {
-            result.append(FizzBuzzer.BUZZ);
-            isEnableRule = false;
-        }
-        if (isEnableRule && isContains(index, "7")) {
-            result.append(FizzBuzzer.WHIZZ);
-            isEnableRule = false;
-        }
-        if (isEnableRule && index % 3 == 0) {
+        if (index % 3 == 0 && (!isContains7 || isContains5)) {
             result.append(FizzBuzzer.FIZZ);
         }
-        if (isEnableRule && index % 5 == 0) {
+        if (index % 5 == 0 && !isContains7) {
             result.append(FizzBuzzer.BUZZ);
         }
-        if (isEnableRule && index % 7 == 0) {
+        if (index % 7 == 0) {
             result.append(FizzBuzzer.WHIZZ);
         }
-        if (result.length() > 0) {
-            return result.toString();
-        }
-        return String.valueOf(index);
+        return result.length() > 0 ? result.toString() : String.valueOf(index);
     }
 
     private static boolean isContains(final int index, String character) {
-        return String.valueOf(index).indexOf(character) > 0;
+        return String.valueOf(index).indexOf(character) > -1;
     }
 }

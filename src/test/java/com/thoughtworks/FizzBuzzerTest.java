@@ -85,24 +85,6 @@ public class FizzBuzzerTest {
     }
 
     @Test
-    public void should_return_Buzz_when_include_number_five()
-    {
-        String result = "Buzz";
-        assertEquals(FizzBuzzer.fizzBuzz(15), result);
-        assertEquals(FizzBuzzer.fizzBuzz(25), result);
-        assertEquals(FizzBuzzer.fizzBuzz(35), result);
-    }
-
-    @Test
-    public void should_return_Whizz_when_include_number_seven()
-    {
-        String result = "Whizz";
-        assertEquals(FizzBuzzer.fizzBuzz(7), result);
-        assertEquals(FizzBuzzer.fizzBuzz(17), result);
-        assertEquals(FizzBuzzer.fizzBuzz(37), result);
-    }
-
-    @Test
     public void should_return_empty_when_pass_error_index()
     {
         String result = "";
@@ -110,5 +92,12 @@ public class FizzBuzzerTest {
         assertEquals(FizzBuzzer.fizzBuzz(-1), result);
         assertEquals(FizzBuzzer.fizzBuzz(-99), result);
     }
-    
+
+    @Test
+    public void should_return_expected_result()
+    {
+        assertEquals(FizzBuzzer.fizzBuzz(30), "Fizz");
+        assertEquals(FizzBuzzer.fizzBuzz(35), "BuzzWhizz");
+        // assertEquals(FizzBuzzer.fizzBuzz(75), "Fizz");
+    }
 }
